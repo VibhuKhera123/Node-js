@@ -1,0 +1,2 @@
+this is the result for asyc with await without blocking:Hello this is first text file
+Hello this is second text file

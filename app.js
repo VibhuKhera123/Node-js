@@ -1,10 +1,8 @@
-const {readFile} = require('fs')
+const http = require('http')
 
-readFile('./content/first.txt','utf8',(err,data)=>{
-    if(err){
-        return;
-    }
-    else{
-        console.log(data);
-    }
-} )
+const server = http.createServer((req,res)=>{
+    res.writeHead(200,{'content-type':'text/html'})
+    res.end('<h1>home Page</h1>')
+})
+
+server.listen(5000)
